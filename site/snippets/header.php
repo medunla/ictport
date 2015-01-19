@@ -10,10 +10,12 @@
   <meta name="keywords" content="<?php echo $site->keywords()->html() ?>">
 
   <?php echo css('assets/css/main.css') ?>
+  <?php echo js('assets/js/fb-connect.js') ?>
 
 </head>
 <body>
-
+  <div id="fb-root"></div>
+  
   <header class="header cf" role="banner">
     <a class="logo" href="<?php echo url() ?>">
       <img src="<?php echo url('assets/images/logo.svg') ?>" alt="<?php echo $site->title()->html() ?>" />

@@ -1,7 +1,7 @@
 <ui class="menu-tags">
 	<form action="" method="GET">
 		<li>
-			<button type="submit" name="tag" value="all">all</button>
+			<button type="submit">all</button>
 		</li>
 		<?php foreach(page('projects')->children() as $project): ?>
 			<li>

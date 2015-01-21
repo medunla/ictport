@@ -19,7 +19,8 @@
   <header class="header cf" role="banner">
     <div class="container">
       <a class="logo" href="<?php echo url() ?>">
-        <img src="<?php echo url('assets/images/logo.svg') ?>" alt="<?php echo $site->title()->html() ?>" />
+        <!-- <img src="<?php echo url('assets/images/logo.svg') ?>" alt="<?php echo $site->title()->html() ?>" /> -->
+        LOGO
       </a>
       <?php snippet('menu') ?>
     </div>

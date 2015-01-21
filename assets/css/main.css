@@ -254,30 +254,29 @@ body {
 }
 .menu-tags-ui li {
   float: left;
-  background-color: 
-}
-.tag-button {
-  padding: 2em;
+  width: 146px;
+  height: 146px; 
   cursor: pointer;
   background-color: #4d4d4d;
   color: #333;
+  text-align: center;
 }
-.tag-button:hover {
+.menu-tags-ui li:hover {
   background-color: #333;
 }
-.tag-button.active {
+.menu-tags-ui li.active {
   background-color: #333;
-  color: #fff;
 }
 .amount-page {
-  font-size: 4em;
+  font-size: 3.5em;
   line-height: 0;
-  margin-top:  0.25em !important;
-  margin-bottom: 0.75em !important;
+  margin-top:  0.7em !important;
+  margin-bottom: 0.5em !important;
 }
 .name-tag {
+  font-size: 0.75em;
   margin: 0 !important;
-  line-height: 0;
+  line-height: 1;
 }
 
 
@@ -321,7 +320,6 @@ h1 a, h2 a, h3 a, h4 a {
 -------------------------------------------------- */
 .main {
   padding-bottom: 1.5em;
-  border-bottom: 2px solid red;
 }
 .main hr {
   margin: 3em 0;
@@ -416,16 +414,11 @@ h1 a, h2 a, h3 a, h4 a {
 /* Footer
 -------------------------------------------------- */
 .footer {
-  padding: 1em 0 6em;
-  font-size: .8em;
+  background-color: #ccc;
+  text-align: center;
+  padding-top: 1.5em;
+  padding-bottom: 1.5em;
 }
-.copyright {
-  float: left;
-}
-.colophon {
-  float: right;
-}
-.colophon a b {
-  color: red;
-  padding-left: .25em;
+.footer .by {
+  margin-bottom: 0.5em;
 }

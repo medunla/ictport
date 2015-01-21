@@ -1,16 +1,20 @@
 
 <?php 
 if (empty($_GET["tag"])) {
-  $_GET["tag"] = "outdoor";
+  $_GET["tag"] = "WebStudio1";
 }
-
+$i=1;
+$classli = "";
 ?>
 
 
 <ul class="container teaser cf">
-  <?php foreach(page('projects')->children() as $project): ?>
-  <?php if ($project->tags() == $_GET["tag"] || $_GET["tag"] == "all") { ?>
-    <li>
+  <?php foreach(page('work')->children() as $project): ?>
+  <?php if ($project->tags() == $_GET["tag"] || $_GET["tag"] == "all") { 
+        if ($i%3==1 || $i==1) { $classli = "first"; }
+        else { $classli = ""; }
+  ?>
+    <li class="<?= $classli ?>">
       <?php if($image = $project->images()->sortBy('sort', 'asc')->first()): ?>
         <a href="<?php echo $project->url() ?>">
           <img src="<?php echo $image->url() ?>" alt="<?php echo $project->title()->html() ?>" >
@@ -24,12 +28,12 @@ if (empty($_GET["tag"])) {
         <div class="profile cf">
           <img src="" alt="">
           <p><strong>medunla</strong></p>
-          
+          <div class=""><button>btn_face</button></div>
         </div>
       </div>
       
       
     </li>
-  <?php } ?>
+  <?php $i++;} ?>
   <?php endforeach ?>
 </ul>

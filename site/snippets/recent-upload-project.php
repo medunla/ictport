@@ -4,7 +4,7 @@
 		<p>21 January 2015</p>
 	</div>
 	<div class="projects">
-		<?php foreach(page('projects')->children()->limit(5) as $project): ?>
+		<?php foreach(page('work')->children()->limit(5) as $project): ?>
 			<a href="<?php echo $project->url() ?>" title="<?= $project->title()->html() ?>">
 				<div class="project">
 					<p><strong><?= $project->title()->html() ?></strong></p>

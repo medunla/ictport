@@ -1,7 +1,7 @@
 <nav role="navigation">
 
   <ul class="menu cf">
-    <?php foreach($pages->visible() as $p): ?>
+    <!--<?php foreach($pages->visible() as $p): ?>
     <li>
       <a <?php e($p->isOpen(), ' class="active"') ?> href="<?php echo $p->url() ?>"><?php echo $p->title()->html() ?></a>
 
@@ -16,7 +16,8 @@
       <?php endif ?>
 
     </li>
-    <?php endforeach ?>
+    <?php endforeach ?>-->
+    <li><strong>Powered by ict:silpakorn #9</strong></li>
   </ul>
 
 </nav>

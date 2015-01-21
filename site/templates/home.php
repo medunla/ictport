@@ -3,7 +3,7 @@
 	<?php snippet('home-cover') ?>
 	<main class="main" role="main">
 		<?php snippet('menu-tags') ?>
-		<?php snippet('projects') ?>
+		<?php snippet('works') ?>
 
 	</main>
 

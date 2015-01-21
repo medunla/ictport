@@ -126,6 +126,9 @@ body {
 
 /* Navigation
 -------------------------------------------------- */
+.menu {
+  display: none;
+}
 .menu a {
   display: block;
   color: #222;
@@ -191,7 +194,7 @@ body {
   }
   .menu {
     float: right;
-    margin-right: -1em;
+    display: block;
   }
   .menu > li {
     float: left;
@@ -374,6 +377,9 @@ h1 a, h2 a, h3 a, h4 a {
   list-style: none;
   background-color: #e6e6e6;
 }
+.teaser li.first {
+  margin-left: 0;
+}
 .teaser li .title {
   padding: 0.5em;
   margin-bottom: 0;
@@ -388,9 +394,6 @@ h1 a, h2 a, h3 a, h4 a {
     float: left;
     width: 30%;
     margin-left: 5%;
-  }
-  .teaser li:first-child {
-    margin-left: 0;
   }
 }
 

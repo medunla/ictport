@@ -17,7 +17,7 @@
   <div id="fb-root"></div>
   
   <header class="header cf" role="banner">
-    <div class="container">
+    <div class="container cf">
       <a class="logo" href="<?php echo url() ?>">
         <!-- <img src="<?php echo url('assets/images/logo.svg') ?>" alt="<?php echo $site->title()->html() ?>" /> -->
         LOGO

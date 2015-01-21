@@ -91,25 +91,33 @@ html {
   -ms-text-size-adjust: 100%;
 }
 body {
-  margin: 0 auto;
   font-size: 1.25em;
   line-height: 1.5em;
-  padding: 1.5em;
-  max-width: 50em;
   background: #fff;
   color: #222;
+}
+.container {
+  margin: 0 auto;
+  padding-left: 1em;
+  padding-right: 1em;
+  max-width: 50em;
+}
+.cut-word {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 
 /* Header
 -------------------------------------------------- */
 .header {
-  border-bottom: 2px solid red;
-  margin-bottom: 1.5em;
+  background-color: #ccc;
+  padding-top: 0.5em;
+  padding-bottom: 0.5em;
 }
 .logo {
   display: block;
-  margin-bottom: 1.5em;
 }
 .logo img {
   width: 2em;
@@ -174,8 +182,9 @@ body {
 }
 
 @media screen and (min-width: 40em) {
-  body {
-    padding: 3em;
+  .container {
+    padding-left: 3em;
+    padding-right: 3em;
   }
   .logo {
     float: left;
@@ -195,6 +204,82 @@ body {
     display: block;
   }
 }
+
+
+/* Home-cover
+-------------------------------------------------- */
+.home-cover {
+  background-color: #f1f1f1;
+}
+.faculty-title {
+  width: 50%;
+  float: left;
+  padding-left: 1em;
+  padding-right: 1em;
+}
+.recent-upload-project {
+  width: 50%;
+  float: right;
+  color: #fff;
+  background-color: rgba(51,51,51,0.25);
+}
+.recent-upload-project .head {
+  background-color: rgba(51,51,51,0.5);
+  padding: 0.25em 1em;
+}
+.recent-upload-project .head p {
+  text-align: right;
+  float: right;
+}
+.recent-upload-project .head p:first-child {
+  float: left;
+}
+.recent-upload-project .project {
+  padding: 0.25em 1em;
+  border-bottom: 1px #fff solid;
+}
+.recent-upload-project .project.end {
+  border-bottom: 0px;
+}
+
+
+
+/* Menu-tags
+-------------------------------------------------- */
+.menu-tags {
+  background-color: #4d4d4d;
+}
+.menu-tags-ui {
+  list-style-type: none;
+}
+.menu-tags-ui li {
+  float: left;
+  background-color: 
+}
+.tag-button {
+  padding: 2em;
+  cursor: pointer;
+  background-color: #4d4d4d;
+  color: #333;
+}
+.tag-button:hover {
+  background-color: #333;
+}
+.tag-button.active {
+  background-color: #333;
+  color: #fff;
+}
+.amount-page {
+  font-size: 4em;
+  line-height: 0;
+  margin-top:  0.25em !important;
+  margin-bottom: 0.75em !important;
+}
+.name-tag {
+  margin: 0 !important;
+  line-height: 0;
+}
+
 
 
 /* Headings
@@ -283,11 +368,22 @@ h1 a, h2 a, h3 a, h4 a {
 /* Project teaser
 -------------------------------------------------- */
 .teaser {
+  margin-top: 1em;
   list-style: none;
 }
 .teaser li {
   margin-bottom: 1.5em;
   list-style: none;
+  background-color: #e6e6e6;
+}
+.teaser li .title {
+  padding: 0.5em;
+  margin-bottom: 0;
+  border-bottom: 1px solid #ccc;
+}
+.teaser li .text {
+  padding: 0.5em 0.5em 1.5em 0.5em;
+  margin-bottom: 0;
 }
 @media screen and (min-width: 50em) {
   .teaser li {

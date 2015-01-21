@@ -1,16 +1,13 @@
-<h2>x</h2>
 
 <?php 
 if (empty($_GET["tag"])) {
-  $_GET["tag"] = "all";
+  $_GET["tag"] = "outdoor";
 }
 
 ?>
 
 
-
-
-<ul class="teaser cf">
+<ul class="container teaser cf">
   <?php foreach(page('projects')->children() as $project): ?>
   <?php if ($project->tags() == $_GET["tag"] || $_GET["tag"] == "all") { ?>
     <li>
@@ -19,8 +16,18 @@ if (empty($_GET["tag"])) {
           <img src="<?php echo $image->url() ?>" alt="<?php echo $project->title()->html() ?>" >
         </a>
       <?php endif ?>
-      <h3><a href="<?php echo $project->url() ?>"><?php echo $project->title()->html() ?></a></h3>
-      <p><?php echo $project->text()->excerpt(80) ?> <a href="<?php echo $project->url() ?>">read&nbsp;more&nbsp;→</a></p>
+      <div>
+        <p class="title"><strong>
+          <a href="<?php echo $project->url() ?>"><?php echo $project->title()->html() ?></a>
+        </strong></p>
+        <p class="text"><?php echo $project->text()->excerpt(80) ?></p>
+        <div class="profile cf">
+          <img src="" alt="">
+          <p><strong>medunla</strong></p>
+          
+        </div>
+      </div>
+      
       
     </li>
   <?php } ?>

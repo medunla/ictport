@@ -1,11 +1,10 @@
 <?php snippet('header') ?>
 
-  <main class="main" role="main">
-	<?php snippet('share-module') ?>
-	------
-	<?php snippet('menu-tags') ?>
-    <?php snippet('projects') ?>
+	<?php snippet('home-cover') ?>
+	<main class="main" role="main">
+		<?php snippet('menu-tags') ?>
+		<?php snippet('projects') ?>
 
-  </main>
+	</main>
 
 <?php snippet('footer') ?>

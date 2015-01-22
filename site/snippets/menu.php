@@ -1,3 +1,5 @@
+<?php $getdate = getdate(); ?>
+
 <nav role="navigation">
 
   <ul class="menu cf">
@@ -17,7 +19,8 @@
 
     </li>
     <?php endforeach ?>-->
-    <li><strong>Powered by ict:silpakorn #9</strong></li>
+    
+    <li id="clock"></li>
   </ul>
 
 </nav>

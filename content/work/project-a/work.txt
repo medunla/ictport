@@ -1,20 +1,6 @@
-Title: Work Title 01-Web Studio | Project
+Title: WebStudio1 :: RayongTrip
 ----
-Sex: Mrs.
-----
-Fullname: xxx xxxxxx
-----
-Id: 13540267
-----
-Bio: Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget.
-----
-FB: facebook.com/highrk
-----
-Email: adelabert@gmail.com
-----
-Phone: 084-9190182
-----
-Year: 2014
+StudentId: 215, 267
 ----
 Tags: WebStudio1
 ----

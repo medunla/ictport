@@ -2,8 +2,8 @@
 	<div class="container">
 		
 		<div class="faculty-title">
-			<h1>ICT:SILPAKORN</h1>
-			<h3>Web & Interactive Media #9</h3>
+			<h1>ICT:SILPAKORN #9</h1>
+			<h3>Web & Interactive Media</h3>
 		</div>
 		
 		<?php snippet('recent-upload-project') ?>

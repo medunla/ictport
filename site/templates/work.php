@@ -1,14 +1,36 @@
 <?php snippet('header') ?>
-<div class="container">
-  <main class="main" role="main">
+
+  <main class="main container work-page" role="main">
 
     <h1 class="work-title"><?php echo $page->title()->html() ?></h1>
-    <div class="work-by"><b>Project by</b> <?php echo $page->fullname() ?></div>
 
-    <!-- <ul class="meta cf">
-      <li><b>Year:</b> <time datetime="<?php echo $page->date('c') ?>"><?php echo $page->date('Y', 'year') ?></time></li>
-      <li><b>Tags:</b> <?php echo $page->tags() ?></li>
-    </ul> -->
+
+    <div class="work-by">
+      <strong>Project by </strong>
+
+                  <?php
+                    $stu_id = $page->studentid();
+                    $arrStu_id = explode(", ", $stu_id);
+
+                    for ($i=0; $i < count($arrStu_id); $i++) { 
+                      $path = "profile/" . $arrStu_id[$i];
+                      
+
+                      foreach(page('profile')->children() as $profile){
+                        if ($profile == $path) {
+                          if ($i==0) {
+                            echo $profile->fname();
+                          }
+                          else {
+                            echo ", " . $profile->fname();
+                          }
+
+                          
+                        }
+                      }
+                    }
+                  ?>
+    </div>
 
     <div class="text">
       <div class="work-content">
@@ -19,7 +41,7 @@
         
       </div> 
 
-      <?php foreach($page->images()->sortBy('sort', 'asc') as $image): ?>
+      <?php foreach($page->images()->sortBy('sort', 'asc')->limit(3) as $image): ?>
       <figure>
         <img src="<?php echo $image->url() ?>" alt="<?php echo $page->title()->html() ?>">
       </figure>
@@ -33,18 +55,13 @@
       </div> 
     </div>
 
-    <nav class="nextprev cf" role="navigation">
-      <?php if($prev = $page->prevVisible()): ?>
-      <a class="prev" href="<?php echo $prev->url() ?>">&larr; previous</a>
-      <?php endif ?>
-      <?php if($next = $page->nextVisible()): ?>
-      <a class="next" href="<?php echo $next->url() ?>">next &rarr;</a>
-      <?php endif ?>
-    </nav>
-
-
+    <div class="work-end">
+      <img src="<?php echo url('assets/images/end.png') ?>">
+    </div>
   </main>
-</div>
+  
+  <?php snippet('profile') ?>
+
 
 
 <?php snippet('footer') ?>

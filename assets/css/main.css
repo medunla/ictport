@@ -69,7 +69,40 @@ a {
   transition: color .3s, background .3s, border .3s;
 }
 a:hover {
-  color: red;
+  color: #ff3399;
+}
+
+a.a-footer {
+  color: #fff;
+  text-decoration: none;
+  transition: color .3s, background .3s, border .3s;
+}
+a.a-footer:hover {
+  color: #ff3399;
+}
+
+li.active a.a-menu-tags {
+  color: #ff3399;
+  text-decoration: none;
+  transition: color .3s, background .3s, border .3s;
+}
+li.active:hover a.a-menu-tags {
+  color: #ff3399;
+}
+li a.a-menu-tags {
+  color: #ccc;
+  text-decoration: none;
+  transition: color .3s, background .3s, border .3s;
+}
+li:hover a.a-menu-tags {
+  color: #333;
+}
+
+a.a-recent {
+  color: #fff;
+}
+a.a-recent:hover {
+  color: #ff3399;
 }
 
 
@@ -86,12 +119,13 @@ a:hover {
 -------------------------------------------------- */
 html {
   height: 101%;
-  font-family: "Source Sans Pro", sans-serif;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 300;
   -webkit-text-size-adjust: 100%;
   -ms-text-size-adjust: 100%;
 }
 body {
-  font-size: 1.25em;
+  font-size: 16px;
   line-height: 1.5em;
   background: #fff;
   color: #222;
@@ -100,7 +134,7 @@ body {
   margin: 0 auto;
   padding-left: 1em;
   padding-right: 1em;
-  max-width: 50em;
+  max-width: 62em;
   /*background: yellow;*/
 }
 .cut-word {
@@ -113,9 +147,10 @@ body {
 /* Header
 -------------------------------------------------- */
 .header {
-  background-color: #ccc;
+  background-color: #333333;
   padding-top: 0.5em;
   padding-bottom: 0.5em;
+  color: #fff;
 }
 .logo {
   display: block;
@@ -213,23 +248,42 @@ body {
 /* Home-cover
 -------------------------------------------------- */
 .home-cover {
-  background-color: #f1f1f1;
+  background: url('../images/cover.jpg');
+  background-repeat: no-repeat;
+  background-position: center center; 
+  background-size:cover;
 }
+
+
 .faculty-title {
+  margin-top: 9em;
   width: 50%;
   float: left;
   padding-left: 1em;
   padding-right: 1em;
+  color: #fff;
 }
+.faculty-title h1 {
+  font-size: 2.5em;
+  font-weight: bold;
+  margin-bottom: 0;
+}
+.faculty-title h3 {
+  font-size: 1.5em;
+  line-height: 0.75;
+  margin-top: 0;
+}
+
+
 .recent-upload-project {
-  width: 50%;
+  width: 35%;
   float: right;
   color: #fff;
-  background-color: rgba(51,51,51,0.25);
+  background-color: rgba(0,0,0,0.5);
 }
 .recent-upload-project .head {
-  background-color: rgba(51,51,51,0.5);
-  padding: 0.25em 1em;
+  background-color: rgba(0,0,0,0.5);
+  padding: 0.5em 1em;
 }
 .recent-upload-project .head p {
   text-align: right;
@@ -239,11 +293,13 @@ body {
   float: left;
 }
 .recent-upload-project .project {
-  padding: 0.25em 1em;
-  border-bottom: 1px #fff solid;
+  padding: 0.85em 1em;
+  border-top: 1px #fff solid;
+  font-size: 0.9em;
+  line-height: 1.35;
 }
-.recent-upload-project .project.end {
-  border-bottom: 0px;
+.recent-upload-project .project.first {
+  border-top: 0px;
 }
 
 
@@ -251,35 +307,41 @@ body {
 /* Menu-tags
 -------------------------------------------------- */
 .menu-tags {
-  background-color: #4d4d4d;
+  background-color: #e6e6e6;
 }
 .menu-tags-ui {
   list-style-type: none;
 }
 .menu-tags-ui li {
   float: left;
-  width: 146px;
-  height: 146px; 
+  width: 14.285%;
+  height: auto; 
   cursor: pointer;
-  background-color: #4d4d4d;
-  color: #333;
+  background-color: #e6e6e6;
+  color: #ccc;
   text-align: center;
+  transition: background .3s;
+}
+.menu-tags-ui li.disable:hover {
+  background-color: #e6e6e6 !important;
 }
 .menu-tags-ui li:hover {
-  background-color: #333;
+  background-color: #cccccc;
 }
 .menu-tags-ui li.active {
-  background-color: #333;
+  background-color: #cccccc;
 }
+
+
 .amount-page {
   font-size: 3.5em;
   line-height: 0;
-  margin-top:  0.7em !important;
-  margin-bottom: 0.5em !important;
+  margin-top:  0.8em !important;
+  margin-bottom: 0.65em !important;
 }
 .name-tag {
-  font-size: 0.75em;
-  margin: 0 !important;
+  font-size: 0.8em;
+  font-weight: bold;
   line-height: 1;
 }
 
@@ -336,12 +398,6 @@ h1 a, h2 a, h3 a, h4 a {
 .main ol {
   margin-bottom: 1.5em;
 }
-.main a {
-  border-bottom: 2px solid #ddd;
-}
-.main a:hover {
-  border-color: #222;
-}
 
 /* Text blocks */
 .text ul,
@@ -382,14 +438,47 @@ h1 a, h2 a, h3 a, h4 a {
   margin-left: 0;
 }
 .teaser li .title {
-  padding: 0.5em;
+  padding: 0.5em 1em;
   margin-bottom: 0;
   border-bottom: 1px solid #ccc;
+  font-size: 0.9em;
+
 }
 .teaser li .text {
-  padding: 0.5em 0.5em 1.5em 0.5em;
+  padding: 1em;
   margin-bottom: 0;
+
+  font-size: 0.9em;
+  line-height: 1.35;
 }
+.teaser li .profile {
+  padding: 0;
+}
+.teaser li .profile .img {
+  width: 12%;
+  border-radius: 50%;
+  float: left;
+  margin-left: 1em;  
+  margin-right: 0.5em;
+  margin-top: 0.45em;
+  margin-bottom: 0.45em;
+}
+.teaser li .profile p {
+  float: left;
+  padding-top: 0.75em;
+  margin-bottom: 0;
+  font-size: 0.9em;
+
+}
+.teaser li .profile .share_btn {
+  width: 56px;
+  float: right;
+  margin-right: 1em;
+  margin-top: 0.9em;
+  cursor: pointer;
+}
+
+
 @media screen and (min-width: 50em) {
   .teaser li {
     float: left;
@@ -418,10 +507,11 @@ h1 a, h2 a, h3 a, h4 a {
 /* Footer
 -------------------------------------------------- */
 .footer {
-  background-color: #ccc;
+  background-color: #333333;
   text-align: center;
   padding-top: 1.5em;
   padding-bottom: 1.5em;
+  color: #fff;
 }
 .footer .by {
   margin-bottom: 0.5em;
@@ -429,24 +519,59 @@ h1 a, h2 a, h3 a, h4 a {
 
 /* Work page
 -------------------------------------------------- */
+.work-page img {
+  width: 80%;
+  margin: 0 auto;
+}
 .work-title{
   font-weight: 900;
-  margin: 20px auto 5px;
+  margin: 3em auto 0.25em;
   display: table;
-  font-size: 30px;
 }
 .work-by{
-  margin: 0 auto 30px;
+  width: 50%;
+  margin: 0 auto 1em;
   display: table;
 }
 .work-content{
   width: 50%;
-  margin: 0 auto;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 3em;
+  margin-bottom: 3em;
 
 }
 .content-text{
   text-indent: 3em;
-  font-size: 16px;
-  line-height: 16px;
 }
- 
+.work-end {
+  width: 56px;
+  margin: 0 auto;
+  padding-bottom: 2em;
+}
+
+
+/* Profile page
+-------------------------------------------------- */
+.profile {
+  background-color: #e6e6e6;
+  padding-top: 2em;
+  padding-bottom: 2em;
+  border-top: 1px solid #fff;
+}
+.profile-pic {
+  width: 25%;
+  height: 25%;
+  float: left;
+  margin-right: 5%;
+}
+.profile-pic img {
+  border-radius: 50%;
+}
+.profile-text {
+  width: 70%;
+  float: left;
+}
+.profile-text .name {
+  font-size: 1.5em;
+}

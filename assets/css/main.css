@@ -125,7 +125,7 @@ html {
   -ms-text-size-adjust: 100%;
 }
 body {
-  font-size: 16px;
+  font-size: 14px;
   line-height: 1.5em;
   background: #fff;
   color: #222;
@@ -134,7 +134,7 @@ body {
   margin: 0 auto;
   padding-left: 1em;
   padding-right: 1em;
-  max-width: 62em;
+  max-width: 71em;
   /*background: yellow;*/
 }
 .cut-word {
@@ -148,15 +148,15 @@ body {
 -------------------------------------------------- */
 .header {
   background-color: #333333;
-  padding-top: 0.5em;
-  padding-bottom: 0.5em;
+  padding-top: 1em;
+  padding-bottom: 1em;
   color: #fff;
 }
 .logo {
   display: block;
 }
 .logo img {
-  width: 2em;
+  width: 7em;
 }
 
 
@@ -164,6 +164,10 @@ body {
 -------------------------------------------------- */
 .menu {
   display: none;
+  font-size: 1em;
+  font-weight: bold;
+  text-transform: uppercase;
+  margin-top: 0.2em;
 }
 .menu a {
   display: block;
@@ -294,8 +298,8 @@ body {
 }
 .recent-upload-project .project {
   padding: 0.85em 1em;
-  border-top: 1px #fff solid;
-  font-size: 0.9em;
+  border-top: 1px #000 solid;
+  font-size: 1em;
   line-height: 1.35;
 }
 .recent-upload-project .project.first {
@@ -441,14 +445,14 @@ h1 a, h2 a, h3 a, h4 a {
   padding: 0.5em 1em;
   margin-bottom: 0;
   border-bottom: 1px solid #ccc;
-  font-size: 0.9em;
+  font-size: 1em;
 
 }
 .teaser li .text {
   padding: 1em;
   margin-bottom: 0;
 
-  font-size: 0.9em;
+  font-size: 1em;
   line-height: 1.35;
 }
 .teaser li .profile {
@@ -460,21 +464,21 @@ h1 a, h2 a, h3 a, h4 a {
   float: left;
   margin-left: 1em;  
   margin-right: 0.5em;
-  margin-top: 0.45em;
-  margin-bottom: 0.45em;
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
 }
 .teaser li .profile p {
   float: left;
   padding-top: 0.75em;
   margin-bottom: 0;
-  font-size: 0.9em;
+  font-size: 1em;
 
 }
 .teaser li .profile .share_btn {
   width: 56px;
   float: right;
   margin-right: 1em;
-  margin-top: 0.9em;
+  margin-top: 1.1em;
   cursor: pointer;
 }
 
@@ -482,8 +486,8 @@ h1 a, h2 a, h3 a, h4 a {
 @media screen and (min-width: 50em) {
   .teaser li {
     float: left;
-    width: 30%;
-    margin-left: 5%;
+    width: 32%;
+    margin-left: 2%;
   }
 }
 
@@ -532,6 +536,7 @@ h1 a, h2 a, h3 a, h4 a {
   width: 50%;
   margin: 0 auto 1em;
   display: table;
+  text-align: center;
 }
 .work-content{
   width: 50%;

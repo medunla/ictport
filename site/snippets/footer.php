@@ -66,6 +66,7 @@
 	   
 	  $(document).ready(function()
 	  {
+	  	updateClock();
 	     setInterval('updateClock()', 1000);
 	  });
 	</script>

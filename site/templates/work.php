@@ -6,7 +6,7 @@
 
 
     <div class="work-by">
-      <strong>Project by </strong>
+      <strong>By </strong>
 
                   <?php
                     $stu_id = $page->studentid();

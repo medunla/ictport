@@ -7,7 +7,7 @@ $i=1;
 $classli = "";
 ?>
 
-<?php echo js('assets/js/fb-share.js') ?>
+
 
 <ul class="container teaser cf">
   <?php foreach(page('work')->children() as $project): ?>
@@ -41,10 +41,13 @@ $classli = "";
           <img class="img" src="<?php echo url($profile_pic) ?>" alt="<?= $fname ?>">
           <p><strong><?= $fname ?></strong></p>
           <?php
-            // $url = $project->url();
-          $url = 'panupat.in.th';
+            $url = $project->url();
+          // $url = "panupat.in.th";
           ?>
-          <img class="share_btn" onclick="shareFB('<?= $url ?>')" src="<?php echo url('assets/images/facebook_button.svg') ?>" alt="Share Facebook">
+          <button type="button" class="share_btn" onclick="shareFB('<?= $url ?>')">
+            <img  src="<?php echo url('assets/images/facebook_button.svg') ?>" alt="Share Facebook">
+          </button>
+          
         </div>
       </div>
       

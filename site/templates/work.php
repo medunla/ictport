@@ -45,10 +45,6 @@
 
   </main>
 </div>
-<!-- footer profile -->
-<div class="profile-wrap">
-  <div class="container">
-    <div class="profile-img"></div>
-  </div>
-</div>
+
+
 <?php snippet('footer') ?>

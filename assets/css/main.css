@@ -101,7 +101,7 @@ body {
   padding-left: 1em;
   padding-right: 1em;
   max-width: 50em;
-  background: yellow;
+  /*background: yellow;*/
 }
 .cut-word {
   white-space: nowrap;
@@ -430,6 +430,7 @@ h1 a, h2 a, h3 a, h4 a {
 /* Work page
 -------------------------------------------------- */
 .work-title{
+  font-weight: 900;
   margin: 20px auto 5px;
   display: table;
   font-size: 30px;
@@ -447,18 +448,4 @@ h1 a, h2 a, h3 a, h4 a {
   text-indent: 3em;
   font-size: 16px;
   line-height: 16px;
-}
-.profile-wrap{
-  width: 100%;
-  height: auto;
-  background: pink;
-  
-}
-.profile-img{
-  width: 150px;
-  height: 150px;
-  background: red;
-  border-radius: 50%;
-
- 
 }
